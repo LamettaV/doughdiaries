@@ -15,11 +15,14 @@
         header {
             background-color: #333333;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         nav {
             text-align: center;
             padding: 10px 0;
+            background-color: #000000;
         }
         nav a {
             color: white;
@@ -28,6 +31,9 @@
         }
         nav a:hover {
             color: #28C625;
+        }
+        .logo {
+            max-height: 50px;
         }
         .container {
             max-width: 1200px;
@@ -54,24 +60,3 @@
             bottom: 0;
             width: 100%;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Your Website</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <div class="container">
-        <h2>Welcome to our website!</h2>
-        <p>This is the homepage content.</p>
-        <button class="primary">Learn More</button>
-    </div>
-    <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
-    </footer>
-</body>
-</html>
