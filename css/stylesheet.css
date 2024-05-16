@@ -60,7 +60,7 @@ footer {
 }
 
 .hero-banner {
-    background-image: url('hero-image.jpg'); /* Replace 'hero-image.jpg' with your image path */
+    background-image: url('/img/dough_diaries_banner.png'); /* Replace 'hero-image.jpg' with your image path */
     background-size: cover;
     background-position: center;
     height: 400px; /* Adjust height as needed */
