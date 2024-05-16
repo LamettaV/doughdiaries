@@ -58,3 +58,38 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
+.hero-banner {
+    background-image: url('hero-image.jpg'); /* Replace 'hero-image.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust height as needed */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+
+.hero-banner h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-banner p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28C625;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #28C625;
+}
