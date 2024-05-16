@@ -112,7 +112,9 @@ footer {
 }
 
 .headline-section {
+    font-size: 20px;
     text-align: left;
+    margin-top: 50px;
     margin-bottom: 30px;
     margin-left: 10%; /* Adjust this value as needed */
     max-width: 80%;
