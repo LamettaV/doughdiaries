@@ -104,6 +104,15 @@ footer {
     flex: 1;
     margin: 0 20px;
 }
+
+.founder h2 {
+    font-size: 18px;
+}
+
+.founder p {
+    font-size: 14px;
+}
+
 .founder img {
     width: 200px;
     height: 200px;
@@ -112,10 +121,11 @@ footer {
 }
 
 .headline-section {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
     text-align: left;
     margin-top: 50px;
-    margin-bottom: 30px;
-    margin-left: 10%; /* Adjust this value as needed */
+    margin-bottom: 50px;
+    margin-left: 5%; /* Adjust this value as needed */
     max-width: 80%;
 }
