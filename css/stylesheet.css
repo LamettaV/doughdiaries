@@ -129,3 +129,14 @@ footer {
     margin-left: 5%; /* Adjust this value as needed */
     max-width: 80%;
 }
+
+.usp-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.usp1, usp2, usp3 {
+    font-size: 14px;
+}
