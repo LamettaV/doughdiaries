@@ -133,29 +133,13 @@ footer {
 .usp-section {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    padding-top: 50px;
-
+    align-items: center;
 }
 
-.usp1 .usp2 .usp3 {
-    font-size: 14px;
-    padding-top: 50px;
-}
-
-.usp {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.usp1, .usp2, .usp3 {
+    flex: 1;
     text-align: center;
-    position: relative;
-  }
-  .usp-icon {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-  }
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
