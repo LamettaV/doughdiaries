@@ -137,6 +137,7 @@ footer {
 
 }
 
-.usp1, usp2, usp3 {
+.usp1 .usp2 .usp3 {
     font-size: 14px;
+    padding-top: 50px;
 }
