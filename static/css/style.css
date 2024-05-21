@@ -6,15 +6,13 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f3f4f6;
-    color: #333;
+    color: white;
 }
 
 .container {
     text-align: center;
-    background: white;
+    background: black;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -34,10 +32,8 @@ p {
 }
 
 #countdown div {
-    background: #f3f4f6;
+    background: black;
     padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #countdown span {
