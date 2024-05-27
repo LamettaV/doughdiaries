@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="/static/img/dough.png" alt="Logo">
+    <div class="container text-center">
+        <div class="my-5">
+            <img src="/static/img/dough.png" alt="Logo" class="img-fluid">
         </div>
-        <h1>Coming Soon</h1>
-        <p>We're working hard to bring you our new website. Stay tuned!</p>
-        <div id="countdown">
-            <div><span id="days"></span> Days</div>
-            <div><span id="hours"></span> Hours</div>
-            <div><span id="minutes"></span> Minutes</div>
-            <div><span id="seconds"></span> Seconds</div>
+        <h1 class="display-4">Coming Soon</h1>
+        <p class="lead">We're working hard to bring you our new website. Stay tuned!</p>
+        <div id="countdown" class="d-flex justify-content-center my-4">
+            <div class="mx-3">
+                <span id="days" class="h1"></span> <br>Days
+            </div>
+            <div class="mx-3">
+                <span id="hours" class="h1"></span> <br>Hours
+            </div>
+            <div class="mx-3">
+                <span id="minutes" class="h1"></span> <br>Minutes
+            </div>
+            <div class="mx-3">
+                <span id="seconds" class="h1"></span> <br>Seconds
+            </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/static/js/script.js"></script>
 </body>
 </html>
