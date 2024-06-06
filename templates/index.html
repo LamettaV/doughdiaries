@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
-    <title>dough diaries - your finance management app</title>
-    
-</head>
-<body>
-    <header>
-        <img src="{{ url_for('static', filename='img/dough.png') }}" alt="doug diaries logo white" class="logo">
-        <nav>
-            <a href="/index">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/contact">Contact</a>
-        </nav>
-    </header>
+{% extends 'base.html' %}
 
+{% block meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+
+{% block title %} Vanessa Kottas - Resume {% endblock %}
+
+{% block head %}  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+{% endblock %}
+
+{% block content %}
     <div class="hero-banner">
         <h1>dough diaries</h1>
         <p>Track your dough like a pro - <br> because every penny has a story to tell</p>
@@ -50,9 +45,13 @@
             <p>Vanessa is a seasoned expert in marketing and business development. <br> With her strategic insights, she drives our startup towards success.</p>
         </div>
     </div>
+{% endblock %}
 
-    <footer>
-        <p>&copy; 2024 dough diaries. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}
+
+
