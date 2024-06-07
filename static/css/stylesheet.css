@@ -99,26 +99,6 @@ footer {
     justify-content: space-around;
     align-items: flex-start;
 }
-.founder {
-    text-align: center;
-    flex: 1;
-    margin: 0 20px;
-}
-
-.founder h2 {
-    font-size: 18px;
-}
-
-.founder p {
-    font-size: 14px;
-}
-
-.founder img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
 
 .headline-section {
     font-size: 24px;
