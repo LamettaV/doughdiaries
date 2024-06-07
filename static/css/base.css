@@ -66,3 +66,7 @@ footer a:hover {
     color: #ffc107;
     text-decoration: none;
 }
+
+.bg-body-tertiary {
+    background-color: black;
+}
