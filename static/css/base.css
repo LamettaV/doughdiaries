@@ -6,7 +6,7 @@ header {
 }
 
 #navbar {
-    background-color: white !important;
+    background-color: black !important;
 }
 
 
@@ -65,8 +65,4 @@ footer a {
 footer a:hover {
     color: #ffc107;
     text-decoration: none;
-}
-
-.bg-body-tertiary {
-    background-color: black;
 }
