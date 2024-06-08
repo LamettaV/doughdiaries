@@ -18,3 +18,15 @@
     border-radius: 50%;
     margin-bottom: 20px;
 }
+
+.headline-section {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.about-section {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
