@@ -12,45 +12,19 @@
 {% endblock %}
 
 {% block content %}
-    <div class="hero-banner">
-        <h1>dough diaries</h1>
-        <p>Track your dough like a pro - <br> because every penny has a story to tell</p>
-        <a href="#" class="btn">Explore now</a>
-    </div>
-
-    <!-- <div class="container">
-        <h2>Welcome to our website!</h2>
-        <p>This is the homepage content.</p>
-        <button class="primary">Learn More</button>
-    </div> -->
-
-    <div class="container my-5 usp-section">
-        <div class="row">
-            <div class="col-md-4 text-center usp1">Manage your finances</div>
-            <div class="col-md-4 text-center usp2">Monitor your spending</div>
-            <div class="col-md-4 text-center usp3">Do daily challenges</div>
-        </div>
-    </div>
-
-    <!-- <div class="container my-5 headline-section">
-        <h2 class="text-center">Meet our founders</h2>
-    </div>
-
-    <div class="container my-5 about-section">
-        <div class="row">
-            <div class="col-md-6 text-center founder">
-                <img src="{{ url_for('static', filename='img/Headshot_Andrew.jpg') }}" alt="Founder 1" class="img-fluid rounded-circle mb-3">
-                <h2>Andrew</h2>
-                <p>Andrew is a visionary entrepreneur with a passion for innovation. <br> He co-founded our startup with a mission to revolutionize the industry.</p>
-            </div>
-            <div class="col-md-6 text-center founder">
-                <img src="{{ url_for('static', filename='img/Headshot_Vanessa.png') }}" alt="Founder 2" class="img-fluid rounded-circle mb-3">
-                <h2>Vanessa</h2>
-                <p>Vanessa is a seasoned expert in marketing and business development. <br> With her strategic insights, she drives our startup towards success.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 column-content">
+            <div>
+                <h1>dough diaries</h1>
+                <h2>Track your dough like a pro - because every penny has a story to tell</h2>
             </div>
         </div>
-    </div> -->
-    
+        <div class="col-md-6 column-content">
+            <img src="{{ url_for('static', filename='img/mockupdd.png') }}" class="img-fluid" alt="App Screenshot">
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
