@@ -2,3 +2,17 @@ body {
 
     background: black;
 }
+
+.btn btn-primary {
+
+    background: green;
+    color: white;
+
+}
+
+.form-group {
+
+    background: black;
+    color: white;
+
+}
