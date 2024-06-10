@@ -1,6 +1,6 @@
 body {
 
-    background: black;
+    background: black !important;
 }
 
 .btn btn-primary {
@@ -12,7 +12,21 @@ body {
 
 .form-group {
 
-    background: black;
+    background: black !important;
+    color: white;
+
+}
+
+.form-group {
+
+    background: black !important;
+    color: white;
+
+}
+
+.container {
+
+    background: black !important;
     color: white;
 
 }
