@@ -1,65 +1,29 @@
-{% extends 'base.html' %}
+from flask import Flask, render_template, redirect, url_for, flash
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired, Email
 
-{% block meta %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% endblock %}
+app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # Replace with a strong secret key
 
-{% block title %} Contact - Dough Diaries {% endblock %}
+class ContactForm(FlaskForm):
+    name = StringField('Name', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    submit = SubmitField('Submit')
 
-{% block head %}  
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
-{% endblock %}
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    form = ContactForm()
+    if form.validate_on_submit():
+        # Form is valid and can be processed
+        name = form.name.data
+        email = form.email.data
+        # Process the form data, e.g., save to database or send email
+        flash('Form submitted successfully!', 'success')
+        return redirect(url_for('index'))
+    elif form.is_submitted() and not form.validate():
+        flash('Form submission failed. Please correct the errors and try again.', 'danger')
+    return render_template('index.html', form=form)
 
-{% block content %}
-<div class="container bg-black text-white">
-    <h1 class="mt-5 bg-black mt-3 mb-3">Contact us</h1>
-    {% with messages = get_flashed_messages(with_categories=True) %}
-        {% if messages %}
-            <div class="mt-3">
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                        {{ message }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endwith %}
-    <form method="POST" action="{{ url_for('index') }}" class="mt-3">
-        {{ form.hidden_tag() }}
-        <div class="form-group">
-            {{ form.name.label(class="form-label") }}
-            {{ form.name(class="form-control", id="name") }}
-            {% if form.name.errors %}
-                <div class="text-danger">
-                    {% for error in form.name.errors %}
-                        <small>{{ error }}</small>
-                    {% endfor %}
-                </div>
-            {% endif %}
-        </div>
-        <div class="form-group">
-            {{ form.email.label(class="form-label") }}
-            {{ form.email(class="form-control", id="email") }}
-            {% if form.email.errors %}
-                <div class="text-danger">
-                    {% for error in form.email.errors %}
-                        <small>{{ error }}</small>
-                    {% endfor %}
-                </div>
-            {% endif %}
-        </div>
-        <button type="submit" class="btn btn-primary">{{ form.submit() }}</button>
-    </form>
-</div>
-{% endblock %}
-
-{% block scripts %}
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="{{ url_for('static', filename='js/index.js') }}"></script>
-{% endblock %}
+if __name__ == '__main__':
+    app.run(debug=True)
