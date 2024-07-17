@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: black;
             padding: 2vw;
         }
 
@@ -57,8 +57,7 @@
             color: #fff;
             flex: 1;
             min-width: 150px;
-            margin: 5px 0; /* Add vertical margin to each button */
-            font-size: 3vw;
+            margin: 5px 0;
         }
 
         .age-group-btn:hover {
@@ -67,20 +66,28 @@
         }
 
         .btn-primary {
-            border: none; /* Correct syntax to remove border */
+            border: none;
         }
 
-        /* Custom margin adjustments for desktop */
         @media (min-width: 768px) {
             .age-group-btn {
-                margin: 0 5px; /* Horizontal margin for desktop view */
+                margin: 0 5px;
+                font-size: 1rem;
+                max-width: 200px;
+            }
+
+            .income {
+                margin: 0 5px;
+                font-size: 0.7rem;
+                max-width: 200px;
             }
         }
 
-        /* Custom margin adjustments for mobile */
         @media (max-width: 767.98px) {
             .age-group-btn {
-                margin: 5px auto; /* Center the button horizontally with vertical margin */
+                margin: 5px auto;
+                font-size: 2.5vw;
+                max-width: 150px;
             }
         }
     </style>
@@ -97,10 +104,11 @@
                         <button type="button" class="btn age-group-btn" onclick="nextStep()">36-45</button>
                         <button type="button" class="btn age-group-btn" onclick="nextStep()">46-55</button>
                         <button type="button" class="btn age-group-btn" onclick="nextStep()">56+</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Prefer not to say</button>
                     </div>
                 </div>
             </div>
-            <!-- Add other carousel items as needed -->
+            <!-- Demographic - Occupation -->
             <div class="carousel-item">
                 <div class="container text-center">
                     <h2>What is your occupation?</h2>
@@ -112,8 +120,83 @@
                     </div>
                 </div>
             </div>
-            <!-- Add other carousel items as needed Opener -->
-            <!-- Add other carousel items as needed Closer -->
+            <!-- Demographic - Annual Income -->
+            <div class="carousel-item">
+                <div class="container text-center">
+                    <h2>What is your annual income?</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <button type="button" class="btn age-group-btn income" onclick="nextStep()">Under $30,000</button>
+                        <button type="button" class="btn age-group-btn income" onclick="nextStep()">$30,000 - $59,999</button>
+                        <button type="button" class="btn age-group-btn income" onclick="nextStep()">$60,000 - $99,999</button>
+                        <button type="button" class="btn age-group-btn income" onclick="nextStep()">$100,000 and above</button>
+                        <button type="button" class="btn age-group-btn income" onclick="nextStep()">Prefer not to say</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Financial Habits - Current -->
+            <div class="carousel-item">
+                <div class="container text-center">
+                    <h2>How do you currently manage your finances?</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Manually</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Spreadsheets</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Other apps</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Prefer not to say</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Financial Habits - Frequency -->
+            <div class="carousel-item">
+                <div class="container text-center">
+                    <h2>How often do you track your expenses?</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Daily</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Weekly</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Monthly</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Rarely</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Never</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Prefer not to say</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Financial Habits - Challenges -->
+            <div class="carousel-item">
+                <div class="container text-center">
+                    <h2>What financial tasks do you find most challenging?</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Budgeting</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Saving</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Investing</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Tracking expenses</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Prefer not to say</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Security & Privacy - Concerns -->
+            <div class="carousel-item">
+                <div class="container text-center">
+                    <h2>How concerned are you about the security and privacy of your financial data?</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Not concerned</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Slightly concerned</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Moderatly concerned</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Very concerned</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Prefer not to say</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Pricing Monetization - Will to pay -->
+            <div class="carousel-item">
+                <div class="container text-center">
+                    <h2>Would you be willing to pay for a finance management app if it met your needs?</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Yes</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">No</button>
+                        <button type="button" class="btn age-group-btn" onclick="nextStep()">Prefer not to say</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Next slide-->
         </div>
     </div>
 
