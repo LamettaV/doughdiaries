@@ -18,6 +18,10 @@ def about():
 def contact():
     return render_template('contact.html')
 
+@app.route('/usersurvey')
+def usersurvey():
+    return render_template('survey.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 
