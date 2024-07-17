@@ -50,17 +50,6 @@
             resize: vertical;
         }
 
-        .btn-group {
-            margin-top: 30px;
-        }
-
-        .btn-group-horizontal {
-            display: flex;
-            justify-content: center;
-            padding: 2vw;
-            margin: 1vw;
-        }
-
         .age-group-btn {
             padding: 10px 20px;
             font-size: 1.2rem;
@@ -70,6 +59,11 @@
             flex: 1;
             min-width: 150px;
             font-size: 1vw;
+            margin-bottom: 10px;
+        }
+
+        .age-group-btn + .age-group-btn {
+            margin-left: 10px;
         }
 
         .age-group-btn:hover {
@@ -99,21 +93,14 @@
 
             <!-- Test Slide 2-->
             
-            <div class="carousel-item">
-                <div class="container">
-                    <h2>What is your annual income?</h2>
-                    <div class="form-group">
-                        <select id="income" name="income" class="form-control" required>
-                            <option value="">Select your age group</option>
-                            <option value="daily">18-35</option>
-                            <option value="weekly">36-45</option>
-                            <option value="monthly">46-55</option>
-                            <option value="rarely">56+</option>
-                    </div>
-
-                    <div class="step-buttons">
-                        <button class="btn btn-secondary" onclick="prevStep()">Previous</button>
-                        <button class="btn btn-primary" onclick="nextStep()">Next</button>
+            <div class="carousel-item active">
+                <div class="container text-center">
+                    <h2>How old are you?</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <button type="button" class="btn btn-primary age-group-btn" onclick="nextStep()">18-35</button>
+                        <button type="button" class="btn btn-primary age-group-btn" onclick="nextStep()">36-45</button>
+                        <button type="button" class="btn btn-primary age-group-btn" onclick="nextStep()">46-55</button>
+                        <button type="button" class="btn btn-primary age-group-btn" onclick="nextStep()">56+</button>
                     </div>
                 </div>
             </div>
