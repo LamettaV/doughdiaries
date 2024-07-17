@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             background-color: black;
             padding: 2vw;
+            color: white;
         }
 
         .carousel {
@@ -69,6 +70,26 @@
             border: none;
         }
 
+        h2 {
+            padding-bottom: 2vw;
+            font-size: 1vw;
+            line-height: 1.2;
+        }
+
+        .progress {
+            margin-top: 20px;
+            height: 0.2rem;
+        }
+
+        .progress-bar {
+            font-size: 0.7rem;
+            padding: 0;
+            transition: width 0.3s ease;
+            border-radius: 0;
+            width: 1px;
+            height: 0.2rem;
+        }
+
         @media (min-width: 768px) {
             .age-group-btn {
                 margin: 0 5px;
@@ -81,6 +102,10 @@
                 font-size: 0.7rem;
                 max-width: 200px;
             }
+
+            h2 {
+                font-size: 2.5rem;
+            }
         }
 
         @media (max-width: 767.98px) {
@@ -89,12 +114,24 @@
                 font-size: 2.5vw;
                 max-width: 150px;
             }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .progress-bar {
+                font-size: 10px;
+            }
+
         }
     </style>
 </head>
 <body>
     <div id="surveyCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+            <div class="countdown-logo my-2 text-center">
+                <img src="{{ url_for('static', filename='img/dough.png') }}" alt="Logo" class="img-fluid" style="height:200px; width: auto !important;">
+            </div>
             <!-- Demographic - Age -->
             <div class="carousel-item active">
                 <div class="container text-center">
@@ -215,6 +252,11 @@
                 </div>
             </div>
         </div>
+    <!--Progress Bar Start-->
+    <div class="progress">
+        <div id="survey-progress" class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <!--Progress Bar End-->
     </div>
 
     <!-- Scripts -->
@@ -231,6 +273,31 @@
         function nextStep() {
             $('#surveyCarousel').carousel('next');
         }
+        
+        // Progress bar javascript
+
+        $(document).ready(function() {
+        // Initialize variables
+        var totalSteps = $('.carousel-item').length;
+        var currentStep = 0;
+
+        // Initialize progress bar
+        updateProgress();
+
+        // Carousel controls
+        $('#surveyCarousel').on('slide.bs.carousel', function(event) {
+            var to = $(event.relatedTarget).index();
+            currentStep = to;
+            updateProgress();
+        });
+
+        // Update progress bar
+        function updateProgress() {
+            var progress = ((currentStep + 1) / totalSteps) * 100;
+            $('#survey-progress').css('width', progress + '%');
+            $('#survey-progress').attr('aria-valuenow', progress);
+        }
+    });
     </script>
 </body>
 </html>
