@@ -90,6 +90,16 @@
             height: 0.2rem;
         }
 
+        #privacypolicy {
+            font-size: 0.5rem;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
         @media (min-width: 768px) {
             .age-group-btn {
                 margin: 0 5px;
@@ -258,6 +268,8 @@
         <div id="survey-progress" class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <!--Progress Bar End-->
+    <!--Privacy Policy Statement-->
+        <p id="privacypolicy" class="hidden">By continuing, you confirm and guarantee that you have read, understood, and agreed to our <b>Privacy Policy</b>.</p>
     </div>
 
     <!-- Scripts -->
@@ -298,6 +310,18 @@
             $('#survey-progress').css('width', progress + '%');
             $('#survey-progress').attr('aria-valuenow', progress);
         }
+
+        // Update privacy policy visibility
+        function updatePrivacyPolicyVisibility() {
+            if (currentStep === 0) {
+                $('#privacypolicy').removeClass('hidden');
+                console.log('Privacy policy shown.');
+            } else {
+                $('#privacypolicy').addClass('hidden');
+                console.log('Privacy policy hidden.');
+            }
+        }
+
     });
     </script>
 </body>
